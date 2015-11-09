@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Mx-RZ-H1P">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Settings-->
+        <scene sceneID="2qf-ZH-0v9">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uhq-Sc-xVB" customClass="SettingsViewController" customModule="Calc_Training" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="2pn-uC-Joo"/>
+                        <viewControllerLayoutGuide type="bottom" id="yil-tx-udz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="XBE-Vh-S8y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="KUK-lV-Zcm"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJE-hQ-Gym" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="236" y="638"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="ZmJ-iM-of1">
+            <objects>
+                <viewController id="UEv-1A-tcm" customClass="PlayViewController" customModule="Calc_Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gvd-tx-z8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="0PO-3H-xPr"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="soa-MA-hZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSy-0v-zKF">
+                                <rect key="frame" x="526" y="40" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="UEv-1A-tcm" eventType="touchUpInside" id="0qt-bI-NQ0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1In-7f-QnJ">
+                                <rect key="frame" x="232" y="285" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HSy-0v-zKF" secondAttribute="trailing" constant="20" id="2EL-gz-zqQ"/>
+                            <constraint firstItem="1In-7f-QnJ" firstAttribute="width" secondItem="soa-MA-hZ3" secondAttribute="height" multiplier="137:600" id="8Lb-Ji-BXQ"/>
+                            <constraint firstItem="1In-7f-QnJ" firstAttribute="centerY" secondItem="soa-MA-hZ3" secondAttribute="centerY" id="Mn6-A6-GSM"/>
+                            <constraint firstItem="HSy-0v-zKF" firstAttribute="top" secondItem="Gvd-tx-z8U" secondAttribute="bottom" constant="20" id="ZJR-rf-Hxx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HSy-0v-zKF" secondAttribute="trailing" constant="20" id="a54-79-WwG"/>
+                            <constraint firstItem="1In-7f-QnJ" firstAttribute="centerX" secondItem="soa-MA-hZ3" secondAttribute="centerX" id="tNU-ip-sdR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2EL-gz-zqQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Play" id="j2j-g3-d4e"/>
+                    <connections>
+                        <outlet property="numberInput" destination="1In-7f-QnJ" id="TxQ-vS-9Cf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfc-fR-eQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-16"/>
+        </scene>
+        <!--Tabs Controller-->
+        <scene sceneID="LPf-F7-EUo">
+            <objects>
+                <tabBarController id="0Mx-RZ-H1P" customClass="TabsController" customModule="Calc_Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eiA-Sf-o2f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UEv-1A-tcm" kind="relationship" relationship="viewControllers" id="pCb-F9-9aw"/>
+                        <segue destination="Uhq-Sc-xVB" kind="relationship" relationship="viewControllers" id="WgQ-9u-UNW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfh-1H-D9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="308"/>
         </scene>
     </scenes>
 </document>
